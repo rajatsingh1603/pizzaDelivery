@@ -12,6 +12,9 @@ const pizzas = [
       category: "veg",
       image: "https://upload.wikimedia.org/wikipedia/commons/6/6f/Pizza_on_stone.jpg",
       description: "Classic delight with 100% real mozzarella cheese",
+      rating: 3.5,
+      toppings : ["Red Pepper","Onion","Grilled Mushroom","Extra Cheese","Black Olive"],
+
     },
     {
       name: "Farmhouse",
@@ -27,6 +30,8 @@ const pizzas = [
       image: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Pepperoni_pizza.jpg",
       description:
         "Delightful combination of onion, capsicum, tomato & grilled mushroom",
+        rating: 4,
+        toppings : ["Red Pepper","Onion","Grilled Mushroom","Extra Cheese","Black Olive"]
     },
     {
       name: "Veggie Paradise",
@@ -42,6 +47,8 @@ const pizzas = [
       description:
         "The awesome foursome! Golden corn, black olives, capsicum, red paprika",
       image: "https://upload.wikimedia.org/wikipedia/commons/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg",
+      rating: 4.5,
+      toppings : ["Red Pepper","Onion","Grilled Mushroom","Extra Cheese","Black Olive"]
     },
     {
       name: "Chicken Golden Delight",
@@ -57,6 +64,8 @@ const pizzas = [
       image: "https://upload.wikimedia.org/wikipedia/commons/6/6f/Pizza_on_stone.jpg",
       description:
         "Double pepper barbecue chicken, golden corn and extra cheese, true delight",
+        rating: 3.5,
+        toppings : ["Red Pepper","Onion","Grilled Mushroom","Extra Cheese","Black Olive"]
     },
     {
       name: "Chicken Pepperoni",
@@ -72,6 +81,8 @@ const pizzas = [
       image: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Pepperoni_pizza.jpg",
       description:
         "A classic American taste! Relish the delectable flavor of Chicken Pepperoni, topped with extra cheese",
+        rating: 4.5,
+        toppings : ["Red Pepper","Onion","Grilled Mushroom","Extra Cheese","Black Olive"]
     },
     {
       name: "Indi Chicken Tikka",
@@ -87,6 +98,8 @@ const pizzas = [
       image: "https://upload.wikimedia.org/wikipedia/commons/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg",
       description:
         "The wholesome flavour of tandoori masala with Chicken tikka, onion, red paprika & mint mayo",
+        rating: 5,
+        toppings : ["Red Pepper","Onion","Grilled Mushroom","Extra Cheese","Black Olive"]
     },
   ];
   module.exports = pizzas;

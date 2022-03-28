@@ -1,18 +1,19 @@
 import React, { useState } from 'react'
 import { Card, Button, Row, Col, Modal } from "react-bootstrap"
-import {useDispatch} from "react-redux"
-import {addToCart} from "../actions/cartAction"
+import { useDispatch } from "react-redux"
+import { addToCart } from "../actions/cartAction"
 
 function Pizza({ pizza }) {
     const [varient, setVarient] = useState('small')
     const [quantity, setQuantity] = useState(1)
+    const [topping, setTopping] = useState('Red Pepper')
 
     const [show, setShow] = useState(false);
 
     const dispatch = useDispatch();
 
-    const addToCartHandler = () =>{
-        dispatch(addToCart(pizza,quantity,varient));
+    const addToCartHandler = () => {
+        dispatch(addToCart(pizza, quantity, varient));
     }
 
 
@@ -57,11 +58,31 @@ function Pizza({ pizza }) {
                         </Row>
                     </Card.Text>
                     <Row>
-                        <Col md={6}>Price: {pizza.prices[0][varient] * quantity}</Col>
+                        <Col md={6}>Price: {pizza.prices[0][varient] * quantity} ₹</Col>
                         <Col md={6}>
-                            <Button 
-                            onClick={addToCartHandler}
-                            className='bg-warning text-white'>Add to Cart</Button>
+                            <Button
+                                onClick={addToCartHandler}
+                                className='bg-warning text-white'>Add to Cart</Button>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col md={6}>Rating : {pizza.rating}⭐</Col>
+                    </Row>
+                    <Row style={{marginTop: '3px'}}>
+                        <Col md={6}>
+
+                            <h6>Topping</h6>
+                            <select value={topping} onChange={(e) => setTopping(e.target.value)}>
+
+                                {pizza.toppings.map((topping) => (
+                                    <option
+
+
+                                    >{topping}</option>
+                                ))}
+
+                            </select>
+
                         </Col>
                     </Row>
                 </Card.Body>

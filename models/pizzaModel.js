@@ -20,6 +20,11 @@ const pizzaSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    rating :{
+      type : String
+    },
+    toppings : []
+
   },
   { timestamps: true }
 );
