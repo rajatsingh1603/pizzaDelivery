@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Card, Button, Row, Col, Modal } from "react-bootstrap"
 import { useDispatch } from "react-redux"
 import { addToCart } from "../actions/cartAction"
+import '../components/Pizza.css'
 
 function Pizza({ pizza }) {
     const [varient, setVarient] = useState('small')
@@ -20,15 +21,16 @@ function Pizza({ pizza }) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     return (
-        <>
-            <Card style={{ width: '18rem' }}>
+        <>  
+            <Card  className="card1" style={{margin : '10px'}} >  
                 <Card.Img
                     variant="top"
                     src={pizza.image}
                     onClick={handleShow}
-                    style={{ cursor: "pointer" }}
+                    style={{ cursor: "pointer" , height: '300px' , padding: '10px'}}
+                    className="cardImage"
                 />
-                <Card.Body>
+                <Card.Body style={{backgroundColor : '#EFFFFD'}}>
                     <Card.Title>{pizza.name}</Card.Title>
                     <Card.Text>
                         <Row>
@@ -68,7 +70,7 @@ function Pizza({ pizza }) {
                     <Row>
                         <Col md={6}>Rating : {pizza.rating}⭐</Col>
                     </Row>
-                    <Row style={{marginTop: '3px'}}>
+                    <Row style={{ marginTop: '3px' }}>
                         <Col md={6}>
 
                             <h6>Topping</h6>
@@ -90,7 +92,7 @@ function Pizza({ pizza }) {
 
             {/* modal */}
             <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
+                <Modal.Header >
                     <Modal.Title>{pizza.name}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -103,6 +105,12 @@ function Pizza({ pizza }) {
                     </div>
                     <div>{pizza.description}</div>
                 </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Close
+                    </Button>
+                </Modal.Footer>
+
             </Modal>
         </>
     )

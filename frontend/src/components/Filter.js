@@ -9,14 +9,14 @@ function Filter() {
     const [category, setcategory] = useState('all')
     const dispatch = useDispatch();
     return (
-        <div className='p-4 bg-light mt-4'>
+        <div className='p-4 bg-light mt-4 mb-4'>
             <Form>
                 <Row>
                     <Col>
                         <Form.Control
                             value={searchkey}
                             onChange={e => setsearchkey(e.target.value)}
-                            placeholder='search pizza'
+                            placeholder='Search pizza...'
                         />
                     </Col>
                     <Col>
@@ -34,6 +34,7 @@ function Filter() {
                     <Col>
                         <Button
                         onClick={()=> {dispatch(filterPizza(searchkey,category))}}
+                        style={{backgroundColor: '#56BBF1'}}
                         >Search</Button>
                     </Col>
                 </Row>

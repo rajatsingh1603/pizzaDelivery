@@ -14,6 +14,7 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <TopBar />
+      
 
       <Switch>
         <Route path="/about" component={About} exact />

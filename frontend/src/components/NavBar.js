@@ -1,13 +1,14 @@
 import React from 'react'
 import { Navbar, Nav, Container } from "react-bootstrap"
 import { LinkContainer } from "react-router-bootstrap"
+import '../components/Navbar.css'
 
 function NavBar() {
   return (
     <>
-      <Navbar bg="dark" variant="dark" expand="lg">
+      <Navbar style={{backgroundColor : 'white'}} expand="lg">
         <Container fluid>
-          <h6 className="text-light">
+          <h6 className='head'>
             Rajat Pizza Shop
           </h6>
           <Nav className="ms-auto">
